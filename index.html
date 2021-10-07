@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --clr-primary-darkCyan: hsl(185, 75%, 39%);
+      --clr-primary-veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+      --clr-primary-darkGrayishBlue: hsl(227, 10%, 46%);
+      --clr-neutral-darkGray: hsl(0, 0%, 59%);
+      --ff-primary: 'Kumbh Sans', sans-serif;
+      --fw-regular: 400;
+      --fw-heavy: 700;
+      --fs-body: 18px;
+    }
+
+    /* Showcase Body (Centers Card to Page) - CSS Grid Method */
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Initialization, Normalization */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      background-image:
+        url('./images/bg-pattern-top.svg'),
+        url('./images/bg-pattern-bottom.svg');
+      background-position: top -50vh left -10vh,
+        /* this positions the first image */
+        bottom -50vh right -10vh;
+      /* this positions the second image */
+      
+      background-repeat:
+        no-repeat;
+      background-size: 100vh;
+      /* this applies to both images */
+      font-family: var(--ff-primary);
+      font-size: var(--fs-body);
+      font-weight: var(--fw-regular);
+      margin: 0;
+      padding: 0;
+      background-color: var(--clr-primary-darkCyan);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+      margin: 0;
+    }
+
+    .card{
+      width: 325px;
+      width: 325px;
+      border-radius: 10px;
+      background-image: url('./images/bg-pattern-card.svg');
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      100px 100px 80px rgba(0, 0, 0, 0.07)
+    ;
+
+    }
+
+    .cardContent {
+      margin-top: 140px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cardContent h1{
+      font-size: 1rem;
+      color: var(--clr-primary-veryDarkDesaturatedBlue);
+      font-weight: var(--fw-heavy);
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    .cardContent h1 span{
+      color: var(--clr-neutral-darkGray);
+      margin-left: 0.2rem;
+    }
+
+    .cardContent .location{
+      font-size: 0.75rem;
+      color: var(--clr-neutral-darkGray);
+      padding-bottom: 1rem;
+      margin-top: 10px;
+    }
+
+    .photo
+    {
+      margin-top: -50px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .photo img{
+      border-radius: 50%;
+      border: 4px solid white;
+      display: inline-block;
+      height: 100px;
+      width: auto;
+    }
+
+    .cardStats {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      border-top: 1px var(--clr-neutral-darkGray) solid;
+      justify-content: space-evenly;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .cardStats h2{
+      color: var(--clr-primary-veryDarkDesaturatedBlue);
+      font-size: 1rem;
+    }
+
+    .cardStats p{
+      color: var(--clr-neutral-darkGray);
+      font-size: 0.5rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="card">
+    <div class="cardContent">
+      <div class="photo">
+        <img src="./images/image-victor.jpg" alt="profile photo">
+      </div>
+      
+      <h1>Victor Crest <span class='age'>26</span></h1>
+      <p class="location">London</p>
+    </div>
+    <div class="cardStats">
+      <div>
+        <h2>80K</h2>
+        <p>Followers</p>
+      </div>
+      <div>
+        <h2>803K</h2>
+        <p>Likes</p>
+      </div>
+      <div>
+        <h2>1.4K</h2>
+        <p>Photos</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
